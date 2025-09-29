@@ -41,7 +41,7 @@ class LunaliteSdkPlugin :
                     }
                 }
 
-                result.success("http://127.0.0.1:${_localServer.listeningPort}/")
+                result.success("http://localhost:${_localServer.listeningPort}/")
             }
 
             "stopServer" -> {
