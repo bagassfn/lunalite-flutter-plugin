@@ -53,14 +53,14 @@ public class LunaliteSdkPlugin: NSObject, FlutterPlugin {
                     allowRangeRequests: true
                 )
                 try? webServer?.start(options: [
-                    GCDWebServerOption_Port: 0,
+                    GCDWebServerOption_Port: 8981,
                     GCDWebServerOption_BindToLocalhost: true,
                 ])
             }
         }
         let port = webServer?.port ?? 0
         let address =
-            webServer?.serverURL?.absoluteString ?? "http://127.0.0.1:\(port)/"
+            webServer?.serverURL?.absoluteString ?? "http://localhost:\(port)/"
 
         return address
     }
